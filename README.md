@@ -1,5 +1,7 @@
 # TypeScript Template (with Jest Unit Tests)
 
+## A console-only TypeScript boilerplate to get nasty configuration hell out of the way
+
 Starting a simple new, console-only TypeScript node application can be very time consuming if you want to install and configure it with all of the bells and whistles. There are many pre-configured projects out there for projects that expect a browser, which make sense since this is a web-based language. However none exist for console-only applications. This project intends to simplify that process by providing a starter template with everything provided so that you can just get to work right away.
 
 ### Features
