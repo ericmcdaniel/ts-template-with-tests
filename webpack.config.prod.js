@@ -2,9 +2,10 @@ const path = require('path');
 const cleanPlugin = require('clean-webpack-plugin');
 
 module.exports = {
-  target: "node",
-  mode: "production",
+  target: 'node',
+  mode: 'production',
   entry: './src/main.ts',
+  stats: 'errors-only',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
@@ -15,14 +16,12 @@ module.exports = {
       {
         test: /\.ts$/,
         use: 'ts-loader',
-        exclude: /node_modules/
-      }
-    ]
+        exclude: /node_modules/,
+      },
+    ],
   },
   resolve: {
-    extensions: ['.ts', '.js']
+    extensions: ['.ts', '.js'],
   },
-  plugins: [
-    new cleanPlugin.CleanWebpackPlugin()
-  ]
+  plugins: [new cleanPlugin.CleanWebpackPlugin()],
 };

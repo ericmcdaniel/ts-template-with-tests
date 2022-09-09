@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start:dev": "webpack",
-    "start:run": "nodemon -q dist/bundle.js",
-    "start:test": "jest --watchAll --noStackTrace",
-    "build": "webpack --config webpack.config.prod.js",
-    "start": "webpack --config webpack.config.prod.js && clear && node dist/bundle.js"
+    "build": "webpack",
+    "dev": "nodemon dist/bundle.js",
+    "test": "jest --watchAll --noStackTrace",
+    "prestart": "webpack --config webpack.config.prod.js",
+    "start": "node dist/bundle.js"
   },
   "author": "Eric S McDaniel",
   "license": "ISC",
