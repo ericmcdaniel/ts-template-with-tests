@@ -20,7 +20,7 @@ function Main() {
     let value: number;
     try {
       value = compute(result);
-      console.log(result.operandA, result.operator, result.operandB, '=', compute(result));
+      console.log(result.operandA, result.operator, result.operandB, '=', value);
     } catch (error: unknown) {
       if (error instanceof Error) console.error(error.message);
     }
