@@ -10,8 +10,20 @@ function Main() {
     return { operandA: A, operandB: B, operator: problem } as Expression;
   });
 
+  problems.push({
+    operandA: 50,
+    operandB: 0,
+    operator: '/',
+  });
+
   problems.forEach((result) => {
-    console.log(result.operandA, result.operator, result.operandB, '=', compute(result));
+    let value: number;
+    try {
+      value = compute(result);
+      console.log(result.operandA, result.operator, result.operandB, '=', compute(result));
+    } catch (error: unknown) {
+      if (error instanceof Error) console.error(error.message);
+    }
   });
 }
 
