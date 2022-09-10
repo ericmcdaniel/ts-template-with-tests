@@ -5,7 +5,7 @@
   "scripts": {
     "build": "webpack",
     "dev": "nodemon dist/bundle.js",
-    "test": "jest --watchAll --noStackTrace",
+    "test": "jest --watchAll --noStackTrace --maxWorkers=1",
     "prestart": "webpack --config webpack.config.prod.js",
     "start": "node dist/bundle.js"
   },
