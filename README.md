@@ -10,6 +10,7 @@ Starting a simple new, console-only TypeScript node application can be very time
 - Webpack which either bundles your project for development or production
 - Jest with TypeScript support
 - Docker with VSCode Tasks configured
+- Environment variables configured into webpack
 - Preconfigured debugger
 - Prettier support (mostly standard settings)
 

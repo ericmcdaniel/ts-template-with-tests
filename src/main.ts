@@ -1,14 +1,14 @@
-import { Expression } from './equation.model';
 import { compute } from './computation';
+import { Expression } from './equation.model';
 
 class Main {
   static start(): void {
     const operators = ['+', '-', '*', '/'];
-    const A = 10;
-    const B = 5;
+    const A = Number(process.env['FIRST']) || 10;
+    const B = Number(process.env['SECOND']) || 5;
 
     const problems = operators.map((problem) => {
-      return { operandA: A, operandB: B, operator: problem } as Expression;
+      return { operandA: A, operandB: B, operator: problem as Expression['operator'] };
     });
 
     problems.push({

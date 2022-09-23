@@ -1,5 +1,6 @@
 const path = require('path');
 const cleanPlugin = require('clean-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   target: 'node',
@@ -23,5 +24,5 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.js'],
   },
-  plugins: [new cleanPlugin.CleanWebpackPlugin()],
+  plugins: [new cleanPlugin.CleanWebpackPlugin(), new Dotenv({ path: './.env.production' })],
 };
